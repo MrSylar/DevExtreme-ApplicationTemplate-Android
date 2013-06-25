@@ -1,12 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="js.tmpl.abcdef01"
+    package="app.id_00000000000000000000000000000000"
     android:versionCode="1"
     android:versionName="1.0"
     android:windowSoftInputMode="adjustPan" >
 
     <uses-sdk
-        android:minSdkVersion="10"
-        android:targetSdkVersion="10" />
+        android:minSdkVersion="9"
+        android:targetSdkVersion="17" />
 
     <supports-screens
         android:anyDensity="true"
@@ -23,8 +23,8 @@
         android:label="tmpl app name"
         android:theme="@android:style/Theme.Light" >
         <activity
-            android:name=".MainActivity"
-            android:configChanges="orientation|keyboardHidden|keyboard|screenLayout|locale"
+            android:name="app.id_00000000000000000000000000000000.MainActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
             android:label="tmpl activity name"
             android:screenOrientation="unspecified" >
             <intent-filter>
