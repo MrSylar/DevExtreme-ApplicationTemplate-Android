@@ -1,36 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<cordova>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        id        = "io.cordova.ApplicationTemplate"
+        version   = "2.0.0">
 
+    <access origin="*"/>
+
+    <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
     <content src="index.html" />
 
-    <log level="DEBUG" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="InAppBrowserStorageEnabled" value="true" />
+    <preference name="useBrowserHistory" value="true" />
+    <preference name="backgroundColor" value="0xFFF" />
+	
+    <!--
+      <preference name="splashscreen" value="resourceName" />
+      <preference name="loadUrlTimeoutValue" value="20000" />
+      <preference name="disallowOverscroll" value="true" />
+    -->
 
-    <preference
-        name="useBrowserHistory"
-        value="true" />
-    <preference
-        name="exit-on-suspend"
-        value="false" />
-
-    <plugins>
-        <plugin
-            name="App"
-            value="org.apache.cordova.App" />
-        <plugin
-            name="SplashScreen"
-            value="org.apache.cordova.SplashScreen" />
-        <plugin
-            name="Echo"
-            value="org.apache.cordova.Echo" />
-        <plugin
-            name="Globalization"
-            value="org.apache.cordova.Globalization" />
-        <plugin
-            name="InAppBrowser"
-            value="org.apache.cordova.InAppBrowser" />
-        <plugin
-            name="Device"
-            value="org.apache.cordova.Device" />
-    </plugins>
-
-</cordova>
+    <feature name="App">
+      <param name="android-package" value="org.apache.cordova.App"/>
+    </feature>
+    <feature name="Device">
+      <param name="android-package" value="org.apache.cordova.Device"/>
+    </feature>
+    <feature name="NetworkStatus">
+      <param name="android-package" value="org.apache.cordova.NetworkManager"/>
+    </feature>
+    <feature name="Notification">
+      <param name="android-package" value="org.apache.cordova.Notification"/>
+    </feature>
+    <feature name="SplashScreen">
+      <param name="android-package" value="org.apache.cordova.SplashScreen"/>
+    </feature>
+    <feature name="Echo">
+      <param name="android-package" value="org.apache.cordova.Echo"/>
+    </feature>
+    <feature name="Globalization">
+      <param name="android-package" value="org.apache.cordova.Globalization"/>
+    </feature>
+    <feature name="InAppBrowser">
+      <param name="android-package" value="org.apache.cordova.InAppBrowser"/>
+    </feature>
+</widget>

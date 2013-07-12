@@ -2,6 +2,7 @@ package app.id_00000000000000000000000000000000;
 
 import java.io.IOException;
 
+import org.apache.cordova.Config;
 import org.apache.cordova.DroidGap;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -16,7 +17,6 @@ import android.view.WindowManager;
 
 public class MainActivity extends DroidGap {
 	private static final String TAG = "APPTEMPL";
-	private static final String START_URL = "file:///android_asset/www/index.html";
 	private static final String SHOW_SPLASH_SCREEN_PREFERENCE_NAME = "showsplashscreen";
 	private static final int SPLASH_DISPLAY_TIMEOUT = 3000;
 
@@ -46,10 +46,10 @@ public class MainActivity extends DroidGap {
 
 		loadConfiguration();
 
-		if (getStringPreference(SHOW_SPLASH_SCREEN_PREFERENCE_NAME, "false").equals("true")) {
-			super.loadUrl(START_URL, SPLASH_DISPLAY_TIMEOUT);
+		if (getStringPreference(SHOW_SPLASH_SCREEN_PREFERENCE_NAME, "true").equals("true")) {
+			super.loadUrl(Config.getStartUrl(), SPLASH_DISPLAY_TIMEOUT);
 		} else {
-			super.loadUrl(START_URL);
+			super.loadUrl(Config.getStartUrl());
 		}
 
 		super.onResume();

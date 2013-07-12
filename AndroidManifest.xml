@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.id_00000000000000000000000000000000"
+    android:hardwareAccelerated="true"
     android:versionCode="1"
     android:versionName="1.0"
     android:windowSoftInputMode="adjustPan" >
@@ -19,6 +20,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
         android:label="tmpl app name"
         android:theme="@android:style/Theme.Light" >
